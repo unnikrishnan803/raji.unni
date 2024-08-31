@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes for Rajalekshmi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 2px solid #ff4d4d;
+            border-radius: 15px;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            color: #e60000;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: left;
+            animation: fadeInText 1.5s ease-in-out;
+        }
+
+        .message p {
+            margin: 10px 0;
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .photo {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            object-fit: cover;
+            max-height: 300px;
+        }
+
+        button {
+            background-color: #ff4d4d;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e60000;
+            transform: scale(1.05);
+        }
+
+        .card::before {
+            content: '💖';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+        }
+
+        .card::after {
+            content: '💌';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 30px;
+        }
+
+        /* Optional: Background Music */
+        .music-control {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 25px;
+            color: #ff4d4d;
+            background: none;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Happy Birthday, Rajalekshmi!</h1>
+        <div class="message">
+            <p>My friend told me a beautiful girl was coming to the school. I replied, 'So what?' and left. But the beautiful girl joined NSS. I saw her for the first time in NSS; she was very beautiful, and her nose ring (mukuti) was stunning.</p>
+            <p>One day, I drew her picture and gave it to her, but it wasn't exact. Another day, I drew another picture of her from Instagram and gave it to her; she liked that picture. One day, I proposed to her, giving her a rose and a picture. She took the rose and walked away. She replied online that she had no interest in love. For many months, I loved her and proposed to her on stage, but she rejected me, breaking my heart. Finally, many months later, she accepted my love.</p>
+        </div>
+        <img src="lachu.jpg" alt="Rajalekshmi's Photo" class="photo">
+        <button onclick="playAudio()" aria-label="Play Voice Message">Play Voice Message</button>
+        <audio id="voiceMessage" src="love.mp3"></audio>
+
+        <!-- Optional: Background Music -->
+        <audio id="backgroundMusic" src="tum.mp3" loop></audio>
+        <button class="music-control" onclick="toggleMusic()" aria-label="Toggle Background Music">🎵</button>
+    </div>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("voiceMessage");
+            audio.play();
+        }
+
+        function toggleMusic() {
+            var music = document.getElementById("backgroundMusic");
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+    </script>
+</body>
+
+</html>
